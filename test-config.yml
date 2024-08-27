@@ -6,5 +6,5 @@ config:
 
 scenarios:
   - flow:
-      - post:
+      - get:
           url: "/test"

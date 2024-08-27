@@ -1,27 +1,13 @@
 spring:
-  h2:
-    console:
+  threads:
+    virtual:
       enabled: true
-
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:virtual-thread-practice
-    username: sa
-    password:
-
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        format_sql: true
-    open-in-view: false
 
 server:
   tomcat:
     threads:
-      max: 20
-      min-spare: 20
+      max: 200
+      min-spare: 100
     max-connections: 20000
     accept-count: 100
     connection-timeout: 20000
