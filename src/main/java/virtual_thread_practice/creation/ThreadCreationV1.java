@@ -10,13 +10,13 @@ public class ThreadCreationV1 {
         long startMs = System.currentTimeMillis();
 
         for (int i = 0; i < 100_000; i++) {
-            Thread thread = new Thread(() -> {});
+            Thread thread = Thread.ofPlatform().unstarted(() -> {});
             threads.add(thread);
         }
 
         threads.forEach(Thread::start);
-        long endMs = System.currentTimeMillis();
 
+        long endMs = System.currentTimeMillis();
         System.out.println(endMs - startMs);
     }
 }

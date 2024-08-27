@@ -15,8 +15,8 @@ public class ThreadCreationV2 {
         }
 
         threads.forEach(Thread::start);
-        long endMs = System.currentTimeMillis();
 
+        long endMs = System.currentTimeMillis();
         System.out.println(endMs - startMs);
     }
 }
