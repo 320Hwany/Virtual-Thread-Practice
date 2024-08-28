@@ -7,10 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-public class TestController {
+public class PerformanceController {
 
-    @GetMapping("/test")
-    public void test() throws InterruptedException {
+    @GetMapping("/performance")
+    public void performance() throws InterruptedException {
+        log.info("Thread Info : {}", Thread.currentThread());
         Thread.sleep(300);
     }
 }
